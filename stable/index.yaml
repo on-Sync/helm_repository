@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  config-store:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2021-10-20T00:16:08.0440085+09:00"
+    description: A Helm chart for Kubernetes
+    digest: 5ac7ba674712c356e440cbc9bd96a9b87bc4840e202d0697e13a028b3925fc16
+    name: config-store
+    type: application
+    urls:
+    - config-store-0.1.0.tgz
+    version: 0.1.0
+generated: "2021-10-20T00:16:08.0422125+09:00"
