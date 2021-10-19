@@ -3,7 +3,7 @@ entries:
   config-store:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2021-10-20T00:16:08.0440085+09:00"
+    created: "2021-10-20T00:35:26.7271363+09:00"
     description: A Helm chart for Kubernetes
     digest: 5ac7ba674712c356e440cbc9bd96a9b87bc4840e202d0697e13a028b3925fc16
     name: config-store
@@ -11,4 +11,109 @@ entries:
     urls:
     - config-store-0.1.0.tgz
     version: 0.1.0
-generated: "2021-10-20T00:16:08.0422125+09:00"
+  ingress-nginx:
+  - annotations:
+      artifacthub.io/changes: |
+        - Disable builtin ssl_session_cache
+        - Print warning only instead of error if no IngressClass permission is available
+        - Bump internal libraries versions
+        - Fix documentations
+      artifacthub.io/prerelease: "false"
+    apiVersion: v2
+    appVersion: 1.0.4
+    created: "2021-10-20T00:35:26.7293959+09:00"
+    description: Ingress controller for Kubernetes using NGINX as a reverse proxy
+      and load balancer
+    digest: 820257a19a8607bd8a20d18350a4cf2d34d2d75a7b0e4ebd244317844fe70fd2
+    home: https://github.com/kubernetes/ingress-nginx
+    icon: https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Nginx_logo.svg/500px-Nginx_logo.svg.png
+    keywords:
+    - ingress
+    - nginx
+    kubeVersion: '>=1.19.0-0'
+    maintainers:
+    - name: ChiefAlexander
+    name: ingress-nginx
+    sources:
+    - https://github.com/kubernetes/ingress-nginx
+    type: application
+    urls:
+    - ingress-nginx-4.0.6.tgz
+    version: 4.0.6
+  jenkins:
+  - annotations:
+      artifacthub.io/images: |
+        - name: jenkins
+          image: jenkins/jenkins:2.303.2-jdk11
+        - name: k8s-sidecar
+          image: kiwigrid/k8s-sidecar:1.14.2
+        - name: inbound-agent
+          image: jenkins/inbound-agent:4.11-1
+        - name: backup
+          image: maorfr/kube-tasks:0.2.0
+      artifacthub.io/links: |
+        - name: Chart Source
+          url: https://github.com/jenkinsci/helm-charts/tree/main/charts/jenkins
+        - name: Jenkins
+          url: https://www.jenkins.io/
+    apiVersion: v2
+    appVersion: 2.303.2
+    created: "2021-10-20T00:35:26.7334281+09:00"
+    description: Jenkins - Build great things at any scale! The leading open source
+      automation server, Jenkins provides hundreds of plugins to support building,
+      deploying and automating any project.
+    digest: 498dd6a8e1a4b11e88dfeb33a4785f54d6389f5cc128da5230ad18aae46fb5eb
+    home: https://jenkins.io/
+    icon: https://get.jenkins.io/art/jenkins-logo/logo.svg
+    maintainers:
+    - email: maor.friedman@redhat.com
+      name: maorfr
+    - email: mail@torstenwalter.de
+      name: torstenwalter
+    - email: garridomota@gmail.com
+      name: mogaal
+    - email: wmcdona89@gmail.com
+      name: wmcdona89
+    - email: timjacomb1@gmail.com
+      name: timja
+    name: jenkins
+    sources:
+    - https://github.com/jenkinsci/jenkins
+    - https://github.com/jenkinsci/docker-inbound-agent
+    - https://github.com/maorfr/kube-tasks
+    - https://github.com/jenkinsci/configuration-as-code-plugin
+    urls:
+    - jenkins-3.8.3.tgz
+    version: 3.8.3
+  rabbitmq:
+  - annotations:
+      category: Infrastructure
+    apiVersion: v2
+    appVersion: 3.9.7
+    created: "2021-10-20T00:35:26.7361906+09:00"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 1.x.x
+    description: Open source message broker software that implements the Advanced
+      Message Queuing Protocol (AMQP)
+    digest: ab149fa6ef313bfb7da87b20040ab93ec40e1b2fda0f2dd6443693a6798d58f1
+    home: https://github.com/bitnami/charts/tree/master/bitnami/rabbitmq
+    icon: https://bitnami.com/assets/stacks/rabbitmq/img/rabbitmq-stack-220x234.png
+    keywords:
+    - rabbitmq
+    - message queue
+    - AMQP
+    maintainers:
+    - email: containers@bitnami.com
+      name: Bitnami
+    name: rabbitmq
+    sources:
+    - https://github.com/bitnami/bitnami-docker-rabbitmq
+    - https://www.rabbitmq.com
+    urls:
+    - rabbitmq-8.23.2.tgz
+    version: 8.23.2
+generated: "2021-10-20T00:35:26.7263084+09:00"
